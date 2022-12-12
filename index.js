@@ -1,3 +1,11 @@
-import { User } from "./models/index.js";
+import { Alarm, ErrorLog, Group, GroupMember, LocationStatus, StatisticsHost, User } from "./models/index.js";
 
-console.log(User);
+Alarm.sync();
+ErrorLog.sync();
+Group.sync();
+GroupMember.sync();
+LocationStatus.sync();
+StatisticsHost.sync();
+User.sync();
+
+console.log(Group);
