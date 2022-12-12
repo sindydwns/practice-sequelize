@@ -1,15 +1,14 @@
-import { Model } from "sequelize";
+import { DataTypes, Model } from "sequelize";
+import { sequelize } from "../setting.js";
 
-export default (sequelize, DataTypes) => {
-    class User extends Model {}
-    User.init({
-        intraId: DataTypes.STRING,
-        blackhole: DataTypes.BOOLEAN,
-        slackId: DataTypes.STRING,
-    }, {
-        sequelize,
-        modelName: "User",
-        tableName: "user_list",
-    });
-    return User;
-}
+class User extends Model {}
+User.init({
+    intraId: DataTypes.STRING,
+    blackhole: DataTypes.BOOLEAN,
+    slackId: DataTypes.STRING,
+}, {
+    sequelize,
+    modelName: "User",
+    tableName: "user_list",
+});
+export default User;

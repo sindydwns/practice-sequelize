@@ -1,3 +1,3 @@
-import models from "./models/index.js";
+import { User } from "./models/index.js";
 
-console.log(models.User);
+console.log(User);
